@@ -1,4 +1,4 @@
-Temperatura e Humidade - Schroeder/SC
+Temperatura e Humidade
 =======
 
 Código em Breve.
