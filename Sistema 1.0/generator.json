@@ -1,0 +1,27 @@
+{
+	"baseName": "schroeder",
+	"entities": [
+		{
+			"name": "balduino",
+			"attrs": [
+				{
+					"attrName": "temperature",
+					"attrType": "Float",
+					"min": "",
+					"max": "",
+					"enumValues": [],
+					"required": false
+				},
+				{
+					"attrName": "humidity",
+					"attrType": "Float",
+					"min": "",
+					"max": "",
+					"enumValues": [],
+					"required": false
+				}
+			]
+		}
+	],
+	"resources": []
+}

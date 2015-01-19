@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/icon.png">
+    <link rel="author" href="fabricioronchi.com">
+    <meta name="description" content="Temperatura e Humidade em Schroeder">
+    <title>Arduino</title>
+    <link href="lib/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="lib/sweet-alert/css/sweet-alert.css" rel="stylesheet">
+  </head>
+  <body ng-controller="homeCtrl">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Cadastro &nbsp;<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="/new-sensor"><i class="glyphicon glyphicon-tower"></i>&nbsp;&nbsp;Sensor</a>
+                </li>
+                <li>
+                  <a href="/new-acao"><i class="glyphicon glyphicon-asterisk"></i>&nbsp;&nbsp;Ação</a>
+                </li>
+                <li>
+                  <a href="/new-token"><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;Token</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Consultas &nbsp;<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="/sensor"><i class="glyphicon glyphicon-tower"></i>&nbsp;&nbsp;Sensor</a>
+                </li>
+                <li>
+                  <a href="/acao"><i class="glyphicon glyphicon-asterisk"></i>&nbsp;&nbsp;Ação</a>
+                </li>
+                <li>
+                  <a href="/logs"><i class="glyphicon glyphicon-list"></i>&nbsp;&nbsp;Logs</a>
+                </li>
+                 <li>
+                  <a href="/token"><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;Token</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Arduino &nbsp;<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="/tempo-real"><i class="glyphicon glyphicon-time"></i>&nbsp;&nbsp;Tempo real</a>
+                </li>
+                <li>
+                  <a href="/sensores"><i class="glyphicon glyphicon-signal"></i>&nbsp;&nbsp;Sensores</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Configurações <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a ng-href="/meus-dados"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Perfil</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" ng-click="sair()"><i class="glyphicon glyphicon-log-out"></i>&nbsp;&nbsp;Sair</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container ng-cloak">
+      <div ng-view></div>
+    </div>
+    <script data-main="js/main.js" src="lib/require/require.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap-css/js/bootstrap.min.js"></script>
+    <script src="lib/sweet-alert/js/sweet-alert.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<h3>
+	<i class="glyphicon glyphicon-tower"></i>
+	&nbsp;&nbsp;Novo sensor
+</h3>
+<body>
+	<form name="userForm" role="form">
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<label>Nome</label>
+	    	<input type="text" name="nome" class="form-control" ng-model="dados.nome" placeholder="Ex: Porta	" required>
+	  	</div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<label>Status On</label>
+	    	<input type="text" name="statusOn" class="form-control" ng-model="dados.statusOn" placeholder="Ex: Ligar" required>
+	  	</div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<label>Status Off</label>
+	    	<input type="text" name="statusOff" class="form-control" ng-model="dados.statusOff" placeholder="Ex: Fechar" required>
+	  	</div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<label>On</label>
+	    	<input type="text" name="on" class="form-control" ng-model="dados.on" placeholder="Ex: Entrou no escritório" required>
+	  	</div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<label>Off</label>
+	    	<input type="text" name="off" class="form-control" ng-model="dados.off" placeholder="Ex: Desligou a luz" required>
+	  	</div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<button type="button" class="btn btn-success" ng-disabled="userForm.$invalid" ng-click="saveSensor()">
+	    		<i class="glyphicon glyphicon-ok"></i>&nbsp;&nbsp;Salvar
+	    	</button>
+	  	</div>
+		</div>
+	</div>
+</form>
+</body>

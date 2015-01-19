@@ -1,0 +1,25 @@
+<h3>
+	<i class="glyphicon glyphicon-globe"></i>
+	&nbsp;&nbsp;Novo token
+</h3>
+<body>
+	<form name="userForm" role="form">
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<label>Descricao</label>
+	    	<input type="text" name="nome" class="form-control" ng-model="dados.descricao" placeholder="Ex: Token do sensor de temperatura	" required>
+	  	</div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<button type="button" class="btn btn-success" ng-disabled="userForm.$invalid" ng-click="saveToken()">
+	    		<i class="glyphicon glyphicon-ok"></i>&nbsp;&nbsp;Salvar
+	    	</button>
+	  	</div>
+		</div>
+	</div>
+</form>
+</body>

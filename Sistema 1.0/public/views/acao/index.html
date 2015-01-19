@@ -1,0 +1,28 @@
+<h3>
+	<i class="glyphicon glyphicon-asterisk"></i>
+	&nbsp;&nbsp;Ações
+</h3>
+<body>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th>Sensor origem</th>
+				<th style="width: 200px" class="text-center">Status origem</th>
+				<th>Sensor destino</th>
+				<th style="width: 200px" class="text-center">Status destino</th>
+				<th style="width: 100px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="obj in dados | orderBy:'nome'">
+				<td>{{obj.sensorOrigem.nome}}</td>
+				<td style="width: 200px" class="text-center">{{getStatusOrigem(obj)}}</td>
+				<td>{{obj.sensorDestino.nome}}</td>
+				<td style="width: 200px" class="text-center">{{getStatusDestino(obj)}}</td>
+				<td style="width: 100px" class="text-center">
+					<button ng-click="remover(obj, $index)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>

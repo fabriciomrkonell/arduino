@@ -1,0 +1,59 @@
+<h3>
+	<i class="glyphicon glyphicon-asterisk"></i>
+	&nbsp;&nbsp;Nova ação
+</h3>
+<body>
+	<form name="userForm" role="form">
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<label>Sensor origem</label>
+	    	<select class="form-control" ng-model="dados.sensorOrigem" ng-change="mudarSensorOrigem(dados.sensorOrigem)">
+	    		<option value="{{obj.id}}" ng-repeat="obj in sensores">{{obj.nome}}</option>
+	    	</select>
+	  	</div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+			<div class="form-group">
+				<label>Status do origem</label>
+        <select class="form-control" ng-model="dados.statusOrigem">
+	    		<option value="true">{{getStatusOrigemOn()}}</option>
+	    		<option value="false">{{getStatusOrigemOff()}}</option>
+	    	</select>
+      </div>
+		</div>
+	</div>
+	<div class="row ng-cloak" ng-show="dados.sensorDestino != null">
+		<div class="col-sm-5">
+			<div class="form-group">
+				<label>Sensor destino</label>
+	    	<select class="form-control" ng-model="dados.sensorDestino">
+	    		<option value="{{obj.id}}" ng-repeat="obj in sensores" ng-if="obj.id != dados.sensorOrigem">{{obj.nome}}</option>
+	    	</select>
+      </div>
+		</div>
+	</div>
+	<div class="row ng-cloak" ng-show="dados.sensorDestino != null">
+		<div class="col-sm-5">
+			<div class="form-group">
+				<label>Ação a executar no sensor destino</label>
+        <select class="form-control" ng-model="dados.statusDestino">
+	    		<option value="true">{{getStatusDestinoOn()}}</option>
+	    		<option value="false">{{getStatusDestinoOff()}}</option>
+	    	</select>
+      </div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<button type="button" class="btn btn-success" ng-disabled="dados.sensorDestino == null" ng-click="saveAcao()">
+	    		<i class="glyphicon glyphicon-ok"></i>&nbsp;&nbsp;Salvar
+	    	</button>
+	  	</div>
+		</div>
+	</div>
+</form>
+</body>

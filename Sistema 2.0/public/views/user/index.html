@@ -1,0 +1,43 @@
+<h3>
+	<i class="glyphicon glyphicon-user"></i>
+	&nbsp;&nbsp;Perfil
+</h3>
+<body>
+	<form name="userForm" role="form">
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<label>Nome</label>
+	    	<input type="text" name="nome" class="form-control" ng-model="dados.nome" placeholder="Ex: João da Silva" required>
+	  	</div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+			<div class="form-group" ng-class="{'has-error': userForm.email.$invalid && !userForm.email.$pristine }">
+				<label>Email</label>
+        <input type="email" name="email" class="form-control" placeholder="Ex: joao@gmail.com" ng-model="dados.email" required>
+        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Email inválido!</p>
+      </div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+			<div class="form-group" ng-class="{'has-error': userForm.senha.$invalid && !userForm.senha.$pristine }">
+				<label>Senha</label>
+        <input type="password" name="senha" class="form-control" ng-model="dados.password" required>
+        <p ng-show="userForm.senha.$invalid && !userForm.senha.$pristine" class="help-block">Senha inválida!</p>
+      </div>
+		</div>
+	</div>
+	<div class="row ng-cloak">
+		<div class="col-sm-5">
+	 		<div class="form-group">
+	    	<button type="button" class="btn btn-success" ng-disabled="userForm.$invalid" ng-click="updateUser()">
+	    		<i class="glyphicon glyphicon-ok"></i>&nbsp;&nbsp;Salvar
+	    	</button>
+	  	</div>
+		</div>
+	</div>
+</form>
+</body>

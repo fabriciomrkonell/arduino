@@ -1,0 +1,22 @@
+<h3>
+  <i class="glyphicon glyphicon-time"></i>
+  &nbsp;&nbsp;Tempo real
+</h3>
+<br>
+<div class="row">
+  <div class="col-sm-6" ng-repeat="token in dados">
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">{{token.descricao}}</div>
+      <div class="panel-body">
+        <div class="col-sm-6 text-center">
+          <h4 style="font-size: 6em">{{token.Sensor.humidity || 0}}</h4>
+          <h4>Humidade</h4>
+        </div>
+        <div class="col-sm-6 text-center">
+          <h4 style="font-size: 6em">{{token.Sensor.temperature || 0}}</h4>
+          <h4>Temperatura</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

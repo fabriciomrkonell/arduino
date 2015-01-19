@@ -1,0 +1,24 @@
+<h3>
+	<i class="glyphicon glyphicon-flash"></i>
+	&nbsp;&nbsp;Consulta de sensor
+</h3>
+<body>
+	<table class="table table-condensed table-bordered">
+		<thead>
+			<tr>
+				<th>Sensor</th>
+				<th style="width: 150px" class="text-center">Token</th>
+				<th style="width: 100px" class="text-center">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="obj in dados | orderBy:'nome'">
+				<td>{{obj.descricao}}</td>
+				<td style="width: 150px" class="text-center">{{obj.token}}</td>
+				<td style="width: 100px" class="text-center">
+					<button ng-click="remover(obj, $index)" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>

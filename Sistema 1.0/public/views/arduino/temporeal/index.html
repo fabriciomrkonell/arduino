@@ -1,0 +1,18 @@
+<h3>
+  <i class="glyphicon glyphicon-time"></i>
+  &nbsp;&nbsp;Tempo real
+</h3>
+
+<div class="row">
+ 	<div class="col-lg-4 text-center" ng-repeat="obj in dados | orderBy:'nome'">
+   	<h1>{{obj.nome}}</h1>
+   	<p>
+   		<button class="btn btn-success btn-lg" type="button" ng-show="obj.status == false" ng-click="toogle(obj)">
+   			<i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;&nbsp;{{obj.statusOn}}
+   		</button>
+   		<button class="btn btn-danger btn-lg" type="button" ng-show="obj.status == true" ng-click="toogle(obj)">
+   			<i class="glyphicon glyphicon-thumbs-down"></i>&nbsp;&nbsp;{{obj.statusOff}}
+   		</button>
+   	</p>
+ 	</div>
+</div>

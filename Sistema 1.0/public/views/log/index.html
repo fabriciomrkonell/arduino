@@ -1,0 +1,27 @@
+<h3>
+  <i class="glyphicon glyphicon-list"></i>
+  &nbsp;&nbsp;Logs de acesso
+</h3>
+<br>
+<div class="row">
+  <div class="col-sm-12">
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th style="width: 250px">Usuário</th>
+          <th>Ação</th>
+          <th style="width: 200px" class="text-center">Data</th>
+          <th style="width: 100px" class="text-center">Hora</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="obj in dados | orderBy:'-id'">
+          <td style="width: 250px">{{obj.User.nome}}</td>
+          <td>{{obj.descricao}}</td>
+          <td style="width: 200px" class="text-center">{{getData(obj.createdAt)}}</td>
+          <td style="width: 100px" class="text-center">{{getHora(obj.createdAt)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
